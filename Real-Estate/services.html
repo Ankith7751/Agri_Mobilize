@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Responsive Services Section</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+}
+
+body{
+	background: #eae9ef;
+	padding: 50px 30px 0;
+}
+
+.wrapper .header{
+	margin-bottom: 30px;
+}
+
+.wrapper .header h1{
+	font-weight: 700;
+	text-align: center;
+}
+
+.wrapper .box_wrapper{
+	display: flex;
+	justify-content: center;	
+}
+
+.wrapper .box_row{
+	display: flex;
+	justify-content: space-between;
+	width: 90%;	
+}
+
+.wrapper .box_row .box_col{
+	margin-right: 15px;
+	width: 400px;
+	text-align: center;
+	padding: 25px;
+	border-radius: 15px;
+	box-shadow: 0 0 2px rgba(0,0,0,0.1);
+	color: #fff;
+}
+
+.wrapper .box_row .box_col:last-child{
+	margin-right: 0px;
+}
+
+.wrapper .box_row .box_col.box_col_1{
+	background: #6565d7;
+}
+
+.wrapper .box_row .box_col.box_col_2{
+	background: #ebca47;
+}
+
+.wrapper .box_row .box_col.box_col_3{
+	background: #ef485c;
+}
+
+.wrapper .box_row .box_col .box_title{
+	margin: 12px 0;
+	font-size: 18px;
+	font-weight: 700;
+}
+
+@media screen and (max-width: 1024px) {
+	body{
+		padding: 50px 15px 0;
+	}
+	.wrapper .box_row{
+		width: 100%;	
+	}  
+}
+
+@media screen and (max-width: 767px) {
+	.wrapper .box_row{
+		flex-direction: column;
+	}
+	.wrapper .box_row .box_col{
+		width: 100%;
+		margin: 0;
+		margin-bottom: 15px;
+	}
+}
+button {
+  border-radius: 10px;
+  text-decoration-color: chartreuse;
+  background-color: rgb(156, 208, 231);
+  padding: 15px 32px;
+  text-align: center;
+ text-decoration: chartreuse;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  color: black;
+}
+button {
+  background-color: white;
+  color: black;
+  border: 2px solid #4CAF50;
+}
+
+button:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+	<div class="header">
+		<h1>Services</h1>
+	</div>	
+	<div class="box_wrapper">
+		<div class="box_row">
+			<div class="box_col box_col_1">
+				<div class="box_img">
+					<img src="https://static.thenounproject.com/png/2342974-200.png"  alt="Photography">
+				</div>
+				<div class="box_title">
+					<p>PROPERTY</p>
+				</div>
+				<div class="box_des">
+					Real estate is considered real property that includes land and anything permanently attached to it or built on it, whether natural or man-made.
+There are five main categories of real estate which include residential, commercial, industrial, raw land, and special use.
+Investing in real estate includes purchasing a home, rental property, or land.
+Indirect investment in real estate can be made via REITs or through pooled real estate investment..<br><br>
+                    <button><a href="final.html">PROPERTY </a></button>
+				</div>
+			</div>
+			<div class="box_col box_col_2">
+				<div class="box_img">
+					<img src="https://static.thenounproject.com/png/3535152-200.png" alt="code">
+				</div>
+				<div class="box_title">
+					<p>INTERIOR</p>
+				</div>
+				<div class="box_des">
+					This is particularly true regarding the seven principles of interior design: balance, unity, rhythm, emphasis, 
+                    contrast, scale and proportion, and details.
+                     These standards have been created to help accomplish harmonious interiors that convey character..<br><br>
+                    <button><a href="iNterior.html">INTERIOR </a></button>
+				</div>
+			</div>
+			<div class="box_col box_col_3">
+				<div class="box_img">
+					<img src="transportation-icon-png-24947.png" alt="Camera">
+				</div>
+				<div class="box_title">
+					<p>Transport</p>
+				</div>
+				<div class="box_des">
+					As the world seeks to develop public transport to reduce travel times, traffic, emissions, accidents, 
+                    and bring other benefits, there is a massive barrier in its way: the financial aspect. The fare charged by the
+                     operators usually isn't enough to pay for the system's construction and operation costs, being necessary to 
+                     be complemented with other revenue sources. 
+                    One of the strategies that can help the implementation of transport infrastructure projects is real estate development.<br><br>
+                    <button><a href="transport.html">Transport </a></button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
