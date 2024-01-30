@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGRI MOBILIZE</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f400;
+            color: #33333300;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://media.istockphoto.com/id/1154958041/photo/taking-care-of-the-crop-aerial-view-of-a-tractor-fertilizing-a-cultivated-agricultural-field.jpg?s=612x612&w=0&k=20&c=McnQdUpl6P0Bomx4o8ZG2oHqwIVBC2s5CwWQm58dWRI='); /* Replace 'path/to/your/image.jpg' with the actual path to your image file */
+            background-size: cover; /* Ensure the background image covers the entire header */
+            background-position: center; /* Center the background image */
+            background-repeat: no-repeat;          
+            font-family: 'Lucida Handwriting', cursive;
+            color: #ffffff;
+            padding: 1em;
+            text-align: center;
+        }
+
+        nav {
+            background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://media.istockphoto.com/id/1751631600/photo/aerial-view-agriculture-green-field-from-drone.jpg?s=612x612&w=0&k=20&c=mfaL0SGX1NuXWALYR9hgylpqEuQE90MYXLComxLiqvo='); /* Replace 'path/to/your/image.jpg' with the actual path to your image file */
+            background-size: cover; /* Ensure the background image covers the entire header */
+            background-position: center; /* Center the background image */
+            background-repeat: no-repeat;
+            margin-top: 3px;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        nav a {
+            display: inline-block;
+            font-family: 'Georgia', serif;
+            color: #fff;
+            margin-top: 7px;
+            text-align: center;
+            padding: 14px 15px; /* Adjust the padding as needed */
+            text-decoration: none;
+            transition: font-size 0.2s cubic-bezier(0.88, 0.0, 0.27, 1.0);
+        }
+
+        nav a:hover {
+            background-color: #55555500;
+            font-size: 20px;
+            
+        }
+
+        .search-bar {
+            float: right;
+            margin-top: 0px; /* Adjust the margin-top to align with the navigation */
+            position: relative;
+        }
+
+        .search-bar input[type="text"] {
+            padding: 8px;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            width: 300px; /* Adjust the width as needed */
+        }
+
+        .search-bar button {
+            padding: 8px;
+            border: none;
+            border-radius: 4px;
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+            width: 85px;
+            font-size: 14px;
+        }
+
+
+        main {
+            padding: 0px;
+        }
+
+        section {
+            height: 800px; /* Adjust the height as needed */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #522e03;
+            text-align: center;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        @media (min-width: 601px) and (max-width: 1024px) {
+    section {
+        background-size: cover;
+    }
+}
+
+        .parallax-container {
+            height: 100vh;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fffcf1;
+            text-align: center;
+            transition: background-position 0.3s ease-in-out;
+        }
+
+        #section1 { background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url('https://wallpaperbat.com/img/398122-tractor-wallpaper-antique-tractor.jpg'); }
+        #section2 { background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url('https://wallpaperbat.com/img/218126-john-deere-tractor-farm-industrial-farming-1jdeere-construction.jpg'); }
+        #section3 { background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url('https://wallpaperbat.com/img/228636-farming-wallpaper-top-free-farming-background.jpg'); }
+        #section4 { background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://wallpaperbat.com/img/199627-john-deere-tractor-farm-industrial-farming-1jdeere-construction.jpg'); }
+        #section5 { background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://wallpaperbat.com/img/236598-john-deere-tractor-farm-industrial-farming-1jdeere-construction.jpg'); }
+
+
+        #section1.parallax-container { background-position: 50% 0; }
+        #section2.parallax-container { background-position: 50% 50%; }
+        #section3.parallax-container { background-position: 50% 100%; }
+        #section4.parallax-container { background-position: 50% 100%; }
+        #section5.parallax-container { background-position: 50% 100%; }
+
+        .content {
+            padding: 20px;
+        }
+
+        h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            text-shadow: #fff4d4;
+        }
+
+        .cta-button {
+            font-family: 'Georgia', serif;
+            background-color: #378482;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: font-size 0.2s cubic-bezier(0.88, 0.0, 0.27, 1.0);
+            
+        }
+
+        .cta-button:hover {
+            background-color: #1b7174;
+            font-size: 18px;
+        }
+
+        p {
+            font-size: 1.2em;
+            text-shadow: #fff4d4;
+        }
+        
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+
+       
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>AGRI MOBILIZE</h1>
+    </header>
+
+    
+    <nav>
+        <a href="hm.html">Home</a>
+        <a href="abt.html">About</a>
+        <a href="manage-product.html">Products</a>
+        <a href="con.html">Contact</a>
+        <a class="search-bar"> <input type="text" placeholder="What are you looking for..."> <button>Search</button> </a>
+
+        <!-- Add more navigation links as needed -->
+    </nav>
+
+    <main>
+        <div id="section1" class="parallax-container">
+            <div class="content">
+                <h2>What AGRI MOBILIZE actually do</h2>
+                <p>Agricultural equipment lenders, we alsohelp in agricultural equipment</br> financing or renting, 
+                    by providing financial assistance to farmers and </br>agricultural businesses to acquire the equipment they need </br>for farming operations. 
+                    Our primary role is to offer agricultural machinery</br> and equipment which help in modern Farming and full fill </br>
+                    farmers needs in an affordable price.</p>
+            </div>
+        </div>
+        
+        <div id="section2" class="parallax-container">
+            <div class="content">
+                <h2>Specialized Knowledge About Equipments</h2>
+                <p>Specialized knowledge in the context of equipment refers </br>to a deep understanding and expertise in the specific needs,Agri-Mobilize challenges,</br> and intricacies of the agricultural industry. with </br>specialized knowledge are better equipped to tailor financial solutions </br>to meet the unique requirements of farmers and agribusinesses.</p>
+            </div>
+        </div>
+        
+        <div id="section3" class="parallax-container">
+            <div class="content">
+                <h2>Collateral Evaluation</h2>
+                <p>Collateral evaluation is a critical component of the our process,</br> and it involves assessing the value and quality of assets that</br> a borrower pledges as security for a loan. In the context of </br>agricultural equipment financing, collateral evaluation is particularly </br>relevant as the equipment itself often serves as the primary collateral.</p>
+            </div>
+        </div>
+        
+        <div id="section4" class="parallax-container">
+            <div class="content">
+                <h2>Government Programs</h2>
+                <p>Government programs in the context of agricultural equipment lending</br> typically refer to initiatives and policies implemented by government </br>authorities to support and promote the agricultural sector. </br>These programs aim to provide financial assistance, incentives,</br> and resources to farmers and agribusinesses, facilitating their access to</br> essential equipment and fostering sustainable and efficient farming practices.</p>
+            </div>
+        </div>
+        
+        <div id="section5" class="parallax-container">
+            <div class="content">
+                <h2>Support for Equipment Upgrades</h2>
+                <p>
+                    Support for equipment upgrades from Agri-Mobilize involves</br> providing financial assistance or incentives for farmers to replace or </br>upgrade their existing agricultural machinery and equipment. </br>This support is designed to encourage the adoption of newer, more efficient,</br> 
+                    and technologically advanced equipment.</p>
+                    <button class="cta-button" onclick="navigateToAnotherPage()">VIEW PRODUCTS</button>
+                    
+            </div>
+            
+        </div>
+        
+      
+    </main>
+
+    <script>
+        function navigateToAnotherPage() {
+        // Change 'your_target_page.html' to the actual URL of the page you want to navigate to
+        window.location.href = 'manage-product.html';
+        }
+        // JavaScript for smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+    <footer>
+        &copy; 2023 AGRI-MOBILIZE. All rights reserved.
+    </footer>
+
+</body>
+</html>
